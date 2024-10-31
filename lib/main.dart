@@ -11,9 +11,6 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  FirebaseFirestore.instance.collection('usuarios').
-  doc('prof').set({'Nome': 'TESTE', 'Sobrenome':
-  'Kautzmann'});
 
   runApp(LoginApp());
 }
