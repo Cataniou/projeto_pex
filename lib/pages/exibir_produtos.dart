@@ -145,10 +145,9 @@ class _ExibirProdutosState extends State<ExibirProdutos> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          _buildProductColumn('01', 43),
+                          _buildProductColumn(produto['codigo'], 43), // Exibe o código do produto
                           _buildProductColumn('${produto['nome']}', 80),
-                          _buildProductColumn(
-                              'R\$ ${produto['preco'].toStringAsFixed(2)}', 80),
+                          _buildProductColumn('R\$ ${produto['preco'].toStringAsFixed(2)}', 80),
                           _buildProductColumn('${produto['quantidade']}', 80),
                           _buildActionColumn(index - 1),
                         ],
